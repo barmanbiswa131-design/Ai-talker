@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.env
+.venv/
+training/output/
+checkpoints/
+models/
+*.mp4
+*.mov
+*.png
+*.jpg
+*.jpeg
