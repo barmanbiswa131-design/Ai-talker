@@ -1,0 +1,11 @@
+# Training/fine-tuning configuration template.
+# Fill model_name with a compatible open-source checkpoint whose license permits use.
+model_name: ""
+output_dir: "./training/output"
+resolution: [512, 512]
+frames: 16
+batch_size: 1
+gradient_accumulation: 8
+learning_rate: 0.00001
+num_train_steps: 1000
+mixed_precision: "fp16"
