@@ -1,11 +1,15 @@
-# Training/fine-tuning configuration template.
-# Fill model_name with a compatible open-source checkpoint whose license permits use.
-model_name: ""
-output_dir: "./training/output"
-resolution: [512, 512]
-frames: 16
-batch_size: 1
-gradient_accumulation: 8
-learning_rate: 0.00001
-num_train_steps: 1000
-mixed_precision: "fp16"
+# BISWA AI Wan2.2 TI2V-5B LoRA training profile
+base_model: "Wan-AI/Wan2.2-TI2V-5B"
+trainer: "DiffSynth-Studio"
+dataset_dir: "./data/biswa_video"
+metadata_file: "./data/biswa_video/metadata.csv"
+output_dir: "./models/BISWA-Wan2.2-TI2V-5B-LoRA"
+height: 480
+width: 832
+frames: 49
+dataset_repeat: 100
+epochs: 5
+learning_rate: 0.0001
+lora_rank: 32
+lora_target_modules: "q,k,v,o,ffn.0,ffn.2"
+extra_inputs: "input_image"
