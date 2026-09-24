@@ -4,6 +4,12 @@ pydantic
 python-multipart
 python-dotenv
 torch
+torchvision
 transformers
 accelerate
+diffusers
 safetensors
+pillow
+imageio
+imageio-ffmpeg
+pyyaml
